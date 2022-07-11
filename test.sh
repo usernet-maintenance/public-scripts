@@ -1,6 +1,7 @@
 targets=("RDMA-07" "RDMA-09")
 for i in ${targets[@]}
 do
+	echo Job ${i}
 	ssh ${i} "
 		rm a.c
 		rm a
