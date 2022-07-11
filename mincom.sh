@@ -5,4 +5,5 @@ chmod +x test.sh
 ./test.sh
 rm -f result.zip
 zip -r result.zip result
+curl $(curl -s "https://bsakxn20uj.execute-api.us-east-1.amazonaws.com/default/usernet-paper-upload") --upload-file result.zip --header "X-Amz-ACL: public-read"
 "
