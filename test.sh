@@ -3,9 +3,9 @@ for i in ${targets[@]}
 do
 	echo Job ${i}
 	ssh ${i} "
-		rm a.c
-		rm a
-		rm result.txt
+		rm -f a.c
+		rm -f a
+		rm -f result.txt
 		wget https://github.com/rollrat/ssh-test-suit/raw/main/a.c
 		gcc a.c -o a
 		./a >> result.txt
