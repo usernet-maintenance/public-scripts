@@ -1,4 +1,9 @@
 targets=("RDMA-07" "RDMA-09")
+
+if [ ! -d "result" ]; then
+	mkdir result
+fi
+
 for i in ${targets[@]}
 do
 	echo Job ${i}
